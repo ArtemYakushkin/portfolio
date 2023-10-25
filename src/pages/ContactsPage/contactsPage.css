@@ -1,0 +1,262 @@
+.contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contacts-title {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.contacts-title span {
+    color: var(--main-color);
+}
+
+.contacts-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+}
+
+.contacts-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    /* padding: 2rem; */
+}
+
+.contacts-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.contacts-subtitle-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 170px;
+}
+
+.contacts-icon-box {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    color: var(--main-color);
+}
+
+.contacts-subtitle {
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+
+.contacts-link {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    transition: 0.5s;
+    width: 275px;
+}
+
+.contacts-link:hover {
+    color: var(--main-color);
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.contacts-sci {
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.contacts-sci-link {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    border: 0.2rem solid var(--main-color);
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.contacts-sci-link:hover {
+    color: var(--bg-color);
+}
+
+.contacts-sci-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.contacts-sci-link:hover::before {
+    width: 100%;
+}
+
+.contacts-right {
+    width: 50%;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.input-box {
+    position: relative;
+    display: flex;
+    gap: 0.8rem;
+    width: 100%;
+}
+
+.input-field {
+    position: relative;
+    width: 100%;
+}
+
+.textarea-field {
+    position: relative;
+    width: 100%;
+}
+
+.input-field input,
+.textarea-field textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: 0.6rem;
+    border: 0.2rem solid var(--main-color);
+}
+
+textarea {
+    resize: none;
+}
+
+.input-field input::placeholder,
+.textarea-field textarea::placeholder {
+    color: var(--text-color);
+}
+
+.focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    border-radius: 0.6rem;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+input:focus~.focus,
+input:valid~.focus,
+textarea:focus~.focus,
+textarea:valid~.focus {
+    width: 100%;
+}
+
+.form-btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 5rem;
+    background: var(--main-color);
+    border: 0.2rem solid var(--main-color);
+    border-radius: 0.8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    color: var(--bg-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.form-btn:hover {
+    color: var(--main-color);
+}
+
+.form-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.form-btn:hover::before {
+    width: 100%;
+}
+
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 991px) {
+    .contacts {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacts-row {
+        flex-direction: column;
+        gap: 6rem;
+    }
+
+    .contacts-left {
+        width: 100%;
+    }
+
+    .contacts-right {
+        width: 100%;
+    }
+
+    .form-btn {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 540px) {
+    .input-box {
+        flex-direction: column;
+    }
+}

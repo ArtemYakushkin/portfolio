@@ -1,13 +1,68 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html[data-theme='dark'] {
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+    --modal-bg-color: #081b29f4;
+    --gradient-bg-color: linear-gradient(180deg, rgba(17, 46, 66, 0.8743872549019608) 54%, rgba(255, 255, 255, 0.9136029411764706) 100%);
+}
+
+html[data-theme='light'] {
+    --bg-color: #f3edf2;
+    --second-bg-color: #9f98a7;
+    --text-color: #7c7c7c;
+    --main-color: #291b37;
+    --modal-bg-color: #f3edf2e4;
+    --gradient-bg-color: linear-gradient(180deg, rgba(124, 124, 124, 0.8687850140056023) 58%, rgba(255, 255, 255, 1) 100%);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+
+}
+
+body::-webkit-scrollbar-thumb {
+    border: 2px solid var(--second-bg-color);
+}
+
+section {
+    max-width: 1440px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 10rem 9% 2rem;
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 45%;
+    }
 }
