@@ -10,18 +10,32 @@ const Slider = ({ slide }) => {
   return (
     <>
       {isMobile ? (
-        <img className="slider-img-mobile" src={slide.imgMobile} alt="" />
+        <img
+          className="slider-img-mobile"
+          onClick={() => {
+            setOpen(true);
+          }}
+          src={slide.imgMobile}
+          alt=""
+        />
       ) : (
-        <img className="slider-img" src={slide.img} alt="" />
+        <img
+          className="slider-img"
+          onClick={() => {
+            setOpen(true);
+          }}
+          src={slide.img}
+          alt=""
+        />
       )}
-      <button
+      {/* <button
         className="slider-btn"
         onClick={() => {
           setOpen(true);
         }}
       >
         See More
-      </button>
+      </button> */}
       {open && <Modal slide={slide} closeModal={setOpen} open={open} />}
     </>
   );

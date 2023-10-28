@@ -1,9 +1,12 @@
 import React from "react";
 import { BiCalendar } from "react-icons/bi";
+import { useTranslation } from "react-i18next";
 import "./educationPage.css";
 import { motion } from "framer-motion";
 
 const EducationPage = () => {
+  const { t } = useTranslation();
+
   return (
     <motion.section
       className="education"
@@ -12,12 +15,13 @@ const EducationPage = () => {
       exit={{ x: "-100%", opacity: 0 }}
     >
       <h2 className="education-title">
-        My <span>Journey</span>
+        {t("my")} <span>{t("journey")}</span> {t("through")}{" "}
+        <span>{t("life")}</span>
       </h2>
 
       <div className="education-row">
         <div className="education-column">
-          <h3 className="education-subtitle">Education</h3>
+          <h3 className="education-subtitle">{t("educatio")}</h3>
           <div className="education-box">
             <div className="education-content">
               <div className="education-content-i">
@@ -25,15 +29,8 @@ const EducationPage = () => {
                   <BiCalendar size={20} />
                   <p>2003 - 2008</p>
                 </div>
-                <h3>
-                  Development of Mineral Deposits - Donetsk National Technical
-                  University
-                </h3>
-                <p>
-                  Mining engineering, technical development, environmental
-                  protection, production management, economic analysis, health
-                  and safety at work
-                </p>
+                <h3>{t("university")}</h3>
+                <p>{t("engineer")}</p>
               </div>
             </div>
 
@@ -43,33 +40,24 @@ const EducationPage = () => {
                   <BiCalendar size={20} />
                   <p>2021 - 2022</p>
                 </div>
-                <h3>Full stack developer - IT School GoIT</h3>
-                <p>
-                  Front-end development, back-end development, databases, server
-                  and hosting, version control, optimization and performance,
-                  development and testing
-                </p>
+                <h3>{t("goit")}</h3>
+                <p>{t("frontend")}</p>
               </div>
             </div>
           </div>
         </div>
 
         <div className="education-column">
-          <h3 className="education-subtitle">Experience</h3>
+          <h3 className="education-subtitle">{t("experience")}</h3>
           <div className="education-box">
             <div className="education-content">
               <div className="education-content-i">
                 <div className="education-year">
                   <BiCalendar size={20} />
-                  <p>2008 - present</p>
+                  <p>2008 - {t("present")}</p>
                 </div>
-                <h3>Mining engineer - Donbass excavation company</h3>
-                <p>
-                  Mining management, personnel management from 30 to 70 people,
-                  operational planning, monitoring compliance with labor
-                  protection rules, manufacturing documents management, planning
-                  and reporting
-                </p>
+                <h3>{t("mining")}</h3>
+                <p>{t("management")}</p>
               </div>
             </div>
 
@@ -77,14 +65,10 @@ const EducationPage = () => {
               <div className="education-content-i">
                 <div className="education-year">
                   <BiCalendar size={20} />
-                  <p>2022 - present</p>
+                  <p>2022 - {t("present")}</p>
                 </div>
-                <h3>Freelance Software Developer - Self-employed</h3>
-                <p>
-                  Freedom to choose projects, diverse projects, multitasking,
-                  adaptation to rapidly evolving technologies, responsibility
-                  for meeting project deadlines
-                </p>
+                <h3>{t("freelance")}</h3>
+                <p>{t("freedom")}</p>
               </div>
             </div>
           </div>

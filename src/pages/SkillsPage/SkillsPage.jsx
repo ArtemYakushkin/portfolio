@@ -1,8 +1,11 @@
 import React from "react";
 import "./skillsPage.css";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const SkillsPage = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="skills-background">
       <motion.section
@@ -12,11 +15,12 @@ const SkillsPage = () => {
         exit={{ x: "-100%", opacity: 0 }}
       >
         <h2 className="skills-title">
-          My <span>Skills</span>
+          {t("just")} <span>{t("god")}</span> {t("of")}{" "}
+          <span>{t("knoweledge")}</span> {t("and")} <span>{t("skill")}</span>
         </h2>
         <div className="skills-row">
           <div className="skills-column">
-            <h3 className="skills-subtitle">Frontend Skills</h3>
+            <h3 className="skills-subtitle">Frontend {t("skil")}</h3>
             <div className="skills-box">
               <div className="skills-content">
                 <div className="skills-progress">
@@ -56,7 +60,7 @@ const SkillsPage = () => {
           </div>
 
           <div className="skills-column">
-            <h3 className="skills-subtitle">Backend Skills</h3>
+            <h3 className="skills-subtitle">Backend {t("skil")}</h3>
             <div className="skills-box">
               <div className="skills-content">
                 <div className="skills-progress">

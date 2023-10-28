@@ -5,7 +5,6 @@ import { useTheme } from "../../hooks/use-theme";
 
 const Theme = () => {
   const { theme, setTheme } = useTheme();
-  console.log(theme);
 
   const handleLight = () => {
     setTheme("light");

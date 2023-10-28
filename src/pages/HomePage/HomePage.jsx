@@ -9,6 +9,7 @@ import { BiSolidContact, BiDownload } from "react-icons/bi";
 import "./homePage.css";
 import mainImg from "../../assets/Model bw.png";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const PDF_FILE_URL =
   "http://localhost:3000/ArtemYakushkin-FrontEndDeveloper.pdf";
@@ -28,6 +29,8 @@ const HomePage = () => {
     aTag.remove();
   };
 
+  const { t } = useTranslation();
+
   return (
     <motion.section
       className="home"
@@ -38,25 +41,16 @@ const HomePage = () => {
       <div className="home-left">
         <div className="home-content">
           <h1 className="home-title">
-            Hi, I'm <span>Artem Yakushkin</span>
+            {t("hello")} <span>{t("name")}</span>
           </h1>
           <div className="home-text-animate">
             <h3 className="home-subtitle">Frontend Developer</h3>
           </div>
-          <p className="home-text">
-            Welcome to this website! There's nothing here except coding, a few
-            projects, and some dull technical details. If you were looking for a
-            place to spend your precious time, you've come to the right address!
-            Here, you'll find pages, buttons, and even a bit of color. Besides
-            that, you'll see my photo, but alas, don't expect model standards –
-            it's just a developer's photo. So, if you have some spare time and
-            you're looking for a way to spend it, feel free to browse my
-            projects and read articles. But be careful, it might be contagious!
-          </p>
+          <p className="home-text">{t("mainText")}</p>
           <div className="home-btn-box">
             <Link to={"/contacts"} className="home-btn">
               <BiSolidContact size={20} />
-              Contact Me
+              {t("contactBtn")}
             </Link>
             <button
               className="home-btn"
@@ -65,7 +59,7 @@ const HomePage = () => {
               }}
             >
               <BiDownload size={20} />
-              My Resume
+              {t("resumeBtn")}
             </button>
           </div>
         </div>

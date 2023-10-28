@@ -30,32 +30,14 @@ const ProjectPage = () => {
       <h2 className="project-title">
         My <span>Successes</span> and <span>Failures</span>
       </h2>
-      <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]}
-        spaceBetween={50}
-        slidesPerView={2}
-        grabCursor={true}
-        centeredSlides={true}
-        navigation
-        style={{ width: "100%" }}
-        effect={"coverflow"}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-      >
+      <ul className="project-list">
         {projectsData.map((slide) => (
-          <SwiperSlide
-            key={slide.id}
-            style={{ display: "flex", justifyContent: "center" }}
-          >
+          <li className="project-item" key={slide.id}>
             <Slider slide={slide} />
-          </SwiperSlide>
+          </li>
         ))}
-      </Swiper>
+        <li className="project-list-text">To be continued...</li>
+      </ul>
     </motion.section>
   );
 };

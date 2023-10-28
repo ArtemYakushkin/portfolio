@@ -39,7 +39,7 @@
 
 .skills-box .skills-content {
     position: relative;
-    border: 0.3rem solid var(--main-color);
+    border: 0.2rem solid var(--main-color);
     border-radius: 0.6rem;
     padding: 0.5rem 1.5rem;
     z-index: 1;
@@ -75,7 +75,7 @@
 .skills-bar {
     height: 2.5rem;
     border-radius: 0.6rem;
-    border: 0.3rem solid var(--main-color);
+    border: 0.2rem solid var(--main-color);
     padding: 0.2rem;
     margin: 1rem 0;
 }

@@ -28,11 +28,12 @@ const Modal = ({ slide, closeModal, open }) => {
           ) : (
             <img className="modal-img" src={slide.img} alt="" />
           )}
-          {/* <img className="modal-img" src={slide.img} alt="" /> */}
         </div>
-        <div className="modal-right">
+        <div className="modal-top">
           <h3 className="modal-title">{slide.title}</h3>
           <p className="modal-skills">{slide.skills}</p>
+        </div>
+        <div className="modal-bottom">
           <div className="modal-btn-box">
             <a
               className="modal-btn"
@@ -52,11 +53,52 @@ const Modal = ({ slide, closeModal, open }) => {
               <MdEmojiEmotions />
               Demo
             </a>
-            <div className="modal-btn-close" onClick={() => closeModal(false)}>
-              <AiOutlineClose size={20} />
-            </div>
+          </div>
+          <div className="modal-btn-close" onClick={() => closeModal(false)}>
+            <AiOutlineClose size={20} />
           </div>
         </div>
+        {/* <div className="modal-left">
+          {isMobile ? (
+            <img className="modal-img" src={slide.imgMobile} alt="" />
+          ) : (
+            <img className="modal-img" src={slide.img} alt="" />
+          )}
+        </div>
+        <div className="modal-right">
+          <div className="modal-top">
+            <h3 className="modal-title">{slide.title}</h3>
+            <p className="modal-skills">{slide.skills}</p>
+          </div>
+          <div className="modal-bottom">
+            <div className="modal-btn-box">
+              <a
+                className="modal-btn"
+                href={slide.gitLink}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <BsGithub />
+                Git Repo
+              </a>
+              <a
+                className="modal-btn"
+                href={slide.demoLink}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <MdEmojiEmotions />
+                Demo
+              </a>
+              <div
+                className="modal-btn-close"
+                onClick={() => closeModal(false)}
+              >
+                <AiOutlineClose size={20} />
+              </div>
+            </div>
+          </div>
+        </div> */}
       </div>
     </div>,
     modalRoot

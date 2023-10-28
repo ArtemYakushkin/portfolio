@@ -1,10 +1,11 @@
 .project {
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 10rem 0;
+    justify-content: flex-start;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
 }
 
 .project-title {
@@ -17,9 +18,30 @@
     color: var(--main-color);
 }
 
+.project-list {
+    position: relative;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
 
-@media (max-width: 1200px) {
-    .project {
-        justify-content: flex-start;
+.project-list-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.3rem solid var(--main-color);
+    border-radius: 3rem;
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+@media (max-width: 640px) {
+    .project-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .project-list-text {
+        padding: 10rem 0;
     }
 }

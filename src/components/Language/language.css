@@ -1,4 +1,4 @@
-.theme-btn-group {
+.language-btn-group {
     width: 48px;
     height: 20px;
     background: transparent;
@@ -11,7 +11,14 @@
 
 }
 
-.theme-btn {
+.language-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.language-btn {
     width: 24px;
     height: 18px;
     display: flex;
@@ -20,9 +27,10 @@
     background: transparent;
     color: var(--main-color);
     cursor: pointer;
+    padding: 0 1px;
 }
 
-.theme-btn-activ {
+.language-btn-activ {
     width: 24px;
     height: 18px;
     display: flex;
@@ -31,12 +39,5 @@
     color: var(--bg-color);
     background: var(--main-color);
     cursor: pointer;
-}
-
-.theme-btn-light {
-    width: 50%;
-}
-
-.theme-btn-dark {
-    width: 50%;
+    padding: 0 1px;
 }
