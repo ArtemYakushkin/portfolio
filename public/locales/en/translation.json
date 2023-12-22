@@ -37,5 +37,24 @@
     "knoweledge": "Knoweledge",
     "and": "and",
     "skill": "Skills",
-    "skil": "Skills"
+    "skil": "Skills",
+
+    "myProj": "My",
+    "successe": "Successes",
+    "andProj": "and",
+    "failure": "Failures",
+
+    "call": "Call",
+    "or": "or",
+    "write": "Write",
+    "me": "Me",
+    "number": "Phone number",
+    "email": "Email Address",
+    "telegram": "Telegram",
+    "full": "Full Name",
+    "address": "Email Address",
+    "mobile": "Mobile Number",
+    "subject": "Email Subject",
+    "message": "Your Message",
+    "submit": "Submit"
 }

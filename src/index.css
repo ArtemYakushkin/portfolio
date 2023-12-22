@@ -25,7 +25,7 @@ html[data-theme='light'] {
     --second-bg-color: #8f8e91;
     --text-color: #454545;
     --main-color: #00abf0;
-    --modal-bg-color: #fffffff2;
+    --modal-bg-color: #ffffffe9;
     --gradient-bg-color: linear-gradient(180deg, rgba(124, 124, 124, 0.8687850140056023) 58%, rgba(255, 255, 255, 1) 100%);
 }
 

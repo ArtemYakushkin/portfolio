@@ -28,14 +28,6 @@ const Slider = ({ slide }) => {
           alt=""
         />
       )}
-      {/* <button
-        className="slider-btn"
-        onClick={() => {
-          setOpen(true);
-        }}
-      >
-        See More
-      </button> */}
       {open && <Modal slide={slide} closeModal={setOpen} open={open} />}
     </>
   );

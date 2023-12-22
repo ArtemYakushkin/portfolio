@@ -5,8 +5,6 @@ import { BsGithub } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import "./modal.css";
 import { useMatchMedia } from "../../hooks/use-match-media";
-// import { useParams } from "react-router-dom";
-// import { projectsData } from "../../db/projectsData";
 
 const modalRoot = document.querySelector("#modal-root");
 

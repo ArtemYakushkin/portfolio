@@ -11,6 +11,9 @@ import project10 from '../assets/projectsImg/desktop/img-10.png';
 import project11 from '../assets/projectsImg/desktop/img-11.png';
 import project12 from '../assets/projectsImg/desktop/img-12.png';
 import project13 from '../assets/projectsImg/desktop/img-13.png';
+import project14 from '../assets/projectsImg/desktop/img-14.png';
+import project15 from '../assets/projectsImg/desktop/img-15.png';
+import project16 from '../assets/projectsImg/desktop/img-16.png';
 
 import projectTablet1 from '../assets/projectsImg/tablet/img-1-tab.png';
 import projectTablet2 from '../assets/projectsImg/tablet/img-2-tab.png';
@@ -25,6 +28,9 @@ import projectTablet10 from '../assets/projectsImg/tablet/img-10-tab.png';
 import projectTablet11 from '../assets/projectsImg/tablet/img-11-tab.png';
 import projectTablet12 from '../assets/projectsImg/tablet/img-12-tab.png';
 import projectTablet13 from '../assets/projectsImg/tablet/img-13-tab.png';
+import projectTablet14 from '../assets/projectsImg/tablet/img-14-tab.png';
+import projectTablet15 from '../assets/projectsImg/tablet/img-15-tab.png';
+import projectTablet16 from '../assets/projectsImg/tablet/img-16-tab.png';
 
 import projectMobile1 from '../assets/projectsImg/mobile/img-1-mob.png';
 import projectMobile2 from '../assets/projectsImg/mobile/img-2-mob.png';
@@ -39,6 +45,9 @@ import projectMobile10 from '../assets/projectsImg/mobile/img-10-mob.png';
 import projectMobile11 from '../assets/projectsImg/mobile/img-11-mob.png';
 import projectMobile12 from '../assets/projectsImg/mobile/img-12-mob.png';
 import projectMobile13 from '../assets/projectsImg/mobile/img-13-mob.png';
+import projectMobile14 from '../assets/projectsImg/mobile/img-14-mob.png';
+import projectMobile15 from '../assets/projectsImg/mobile/img-15-mob.png';
+import projectMobile16 from '../assets/projectsImg/mobile/img-16-mob.png';
 
 export const projectsData = [
 	{
@@ -170,5 +179,35 @@ export const projectsData = [
 		imgMobile: projectMobile13,
 		demoLink: 'https://artemyakushkin.github.io/WebStudio/index.html',
 		gitLink: 'https://github.com/ArtemYakushkin/WebStudio',
+	},
+	{
+		id: 14,
+		title: 'Landing site for modern bakery',
+		skills: 'HTML | SCSS | JavaScript',
+		img: project14,
+		imgTablet: projectTablet14,
+		imgMobile: projectMobile14,
+		demoLink: 'https://artemyakushkin.github.io/modern_bakery/',
+		gitLink: 'https://github.com/ArtemYakushkin/modern_bakery',
+	},
+	{
+		id: 15,
+		title: 'Landing site for beauty saloon',
+		skills: 'HTML | SCSS | JavaScript',
+		img: project15,
+		imgTablet: projectTablet15,
+		imgMobile: projectMobile15,
+		demoLink: 'https://artemyakushkin.github.io/beauty_zone/',
+		gitLink: 'https://github.com/ArtemYakushkin/beauty_zone',
+	},
+	{
+		id: 16,
+		title: 'Landing site for Bose',
+		skills: 'HTML | SCSS',
+		img: project16,
+		imgTablet: projectTablet16,
+		imgMobile: projectMobile16,
+		demoLink: 'https://artemyakushkin.github.io/bose/',
+		gitLink: 'https://github.com/ArtemYakushkin/bose',
 	},
 ];

@@ -8,11 +8,13 @@ import {
 } from "react-icons/sl";
 import "./contactsPage.css";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const ContactsPage = () => {
   const gitLink = "https://github.com/ArtemYakushkin";
   const instLink = "https://www.instagram.com/yakushkin_artem_/";
   const linkLink = "https://www.linkedin.com/in/artem-yakushkin-a86722229/";
+  const { t } = useTranslation();
 
   return (
     <motion.section
@@ -22,7 +24,7 @@ const ContactsPage = () => {
       exit={{ x: "-100%", opacity: 0 }}
     >
       <h2 className="contacts-title">
-        Call <span>Or</span> Write <span>Me!</span>
+        {t("call")} <span>{t("or")}</span> {t("write")} <span>{t("me")}!</span>
       </h2>
 
       <div className="contacts-row">
@@ -32,7 +34,7 @@ const ContactsPage = () => {
               <div className="contacts-icon-box">
                 <BsFillPhoneVibrateFill size={20} />
               </div>
-              <p className="contacts-subtitle">Phone number</p>
+              <p className="contacts-subtitle">{t("number")}</p>
             </div>
             <a href="tel:+380507025708" className="contacts-link">
               +38 050 702 5 708
@@ -43,7 +45,7 @@ const ContactsPage = () => {
               <div className="contacts-icon-box">
                 <BiMailSend size={20} />
               </div>
-              <p className="contacts-subtitle">Email Address</p>
+              <p className="contacts-subtitle">{t("email")}</p>
             </div>
             <a
               href="mailto:artem.frontdeveloper@gmail.com"
@@ -57,7 +59,7 @@ const ContactsPage = () => {
               <div className="contacts-icon-box">
                 <BiLogoTelegram size={20} />
               </div>
-              <p className="contacts-subtitle">Telegram</p>
+              <p className="contacts-subtitle">{t("telegram")}</p>
             </div>
             <a
               href="tg://resolve?domain=@ArtemYakushkin"
@@ -97,21 +99,21 @@ const ContactsPage = () => {
           <form className="form">
             <div className="input-box">
               <div className="input-field">
-                <input type="text" placeholder="Full Name" required />
+                <input type="text" placeholder={t("full")} required />
                 <span className="focus"></span>
               </div>
               <div className="input-field">
-                <input type="email" placeholder="Email Address" required />
+                <input type="email" placeholder={t("address")} required />
                 <span className="focus"></span>
               </div>
             </div>
             <div className="input-box">
               <div className="input-field">
-                <input type="number" placeholder="Mobile Number" required />
+                <input type="number" placeholder={t("mobile")} required />
                 <span className="focus"></span>
               </div>
               <div className="input-field">
-                <input type="text" placeholder="Email Subject" required />
+                <input type="text" placeholder={t("subject")} required />
                 <span className="focus"></span>
               </div>
             </div>
@@ -121,14 +123,14 @@ const ContactsPage = () => {
                 id=""
                 cols="30"
                 rows="10"
-                placeholder="Your Message"
+                placeholder={t("message")}
                 required
               ></textarea>
               <span className="focus"></span>
             </div>
             <div className="form-btn-box">
               <button className="form-btn" type="submit">
-                Submit
+                {t("submit")}
               </button>
             </div>
           </form>
