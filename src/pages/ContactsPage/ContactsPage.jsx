@@ -96,7 +96,7 @@ const ContactsPage = () => {
           </div>
         </div>
         <div className="contacts-right">
-          <form className="form">
+          <form className="form" netlify>
             <div className="input-box">
               <div className="input-field">
                 <input type="text" placeholder={t("full")} required />
